@@ -1,0 +1,19 @@
+{
+  "name": "moustaphaounis_3_14122020",
+  "version": "1.0.0",
+  "description": "Site mobile",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/css/main.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codeounis/MoustaphaOunis_3_14122020.git"
+  },
+  "author": "Moustapha Ounis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Codeounis/MoustaphaOunis_3_14122020/issues"
+  },
+  "homepage": "https://github.com/Codeounis/MoustaphaOunis_3_14122020#readme"
+}
