@@ -1,0 +1,69 @@
+/* Mise en place importations polices ShriKhand et Roboto*/
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$bodyfontfamily:Roboto;
+$titlefontfamily:Shrikhand;
+
+
+
+body{
+    font-size:15px;
+    font-family:$bodyfontfamily ;
+    // max-width: 580px;
+    margin: 0;
+}
+
+.localisation{
+    background-color: #eaeaea;
+    height:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow : inset  0 2px 2px 0px rgb(180,180,180);
+    i{
+        margin-right:15px;
+        font-size: 1em;
+    }
+    p{
+        margin:0;
+        font-size:0.8em;
+    }
+}
+
+.presentation{
+    text-align: center;
+    padding: 25px 50px ;
+}
+
+
+h1{
+    font-family:$titlefontfamily ;
+}
+
+header{
+    text-align: center;
+}
+
+.restaurant{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    // max-width: 450px;
+    // width: 50%;
+    height: 175px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.description_plat{
+    display: flex;
+    flex-direction: column;
+}

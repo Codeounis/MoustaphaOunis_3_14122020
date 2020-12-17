@@ -1,0 +1,82 @@
+/* Mise en place importations polices ShriKhand et Roboto*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-size: 15px;
+  font-family: Roboto;
+  margin: 0;
+}
+
+.localisation {
+  background-color: #eaeaea;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: inset 0 2px 2px 0px #b4b4b4;
+          box-shadow: inset 0 2px 2px 0px #b4b4b4;
+}
+
+.localisation i {
+  margin-right: 15px;
+  font-size: 1em;
+}
+
+.localisation p {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.presentation {
+  text-align: center;
+  padding: 25px 50px;
+}
+
+h1 {
+  font-family: Shrikhand;
+}
+
+header {
+  text-align: center;
+}
+
+.restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+img {
+  height: 175px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.description_plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=main.css.map */
