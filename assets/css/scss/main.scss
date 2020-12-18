@@ -22,6 +22,9 @@ h1{
 
 a{
     text-decoration: none;
+    &:visited{
+        color: none;
+    }
 }
 
 header{
@@ -153,16 +156,24 @@ button
             background-size: contain;
             width: 100%;
             border-radius: 15px 15px 0 0;
-            
         }
         .description_restaurant{
             display: flex;
             flex-direction: column;
             position: relative;
+            padding-left: 15px;
+            .restaurant_name{
+                font-weight: bold;
+                padding-top: 10px;
+            }
+            .restaurant_adresse{
+                margin:2px 0 10px 0;
+            }
             .coeur{
                 position: absolute;
-                right: 0;
-                top: 10px
+                right: 20px;
+                top: 12px;
+                font-size:1.8em;
             }
         }  
     }
@@ -179,9 +190,24 @@ footer{
     display: flex;
     flex-direction: column;
     background-color: #353535;
+    color: white;
+    padding:0 0 25px 15px;
     h3{
         font-family: $titlefontfamily;
+    }
+    .lien_footer{
+        display: flex;
+    }
+    i{
+        margin-right: 13px;
+        padding-top: 3px;
+    }
+    :nth-child(2){
+        padding-left: 6px;
+    }
+    a{
         color: white;
+        margin-bottom: 5px;
     }
 }
 
