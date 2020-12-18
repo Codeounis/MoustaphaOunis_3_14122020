@@ -11,6 +11,10 @@ h1 {
   font-family: Shrikhand;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   text-align: center;
 }
@@ -94,7 +98,7 @@ button:hover {
 }
 
 .fonctionnement {
-  padding: 20px 0 50px 10px;
+  padding: 20px 20px 50px 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -105,7 +109,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: blue;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -119,11 +122,8 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
-  width: 75%;
+  width: 80%;
   padding-left: 0;
   text-align: center;
   background-color: whitesmoke;
@@ -145,14 +145,19 @@ button:hover {
 }
 
 .fonctionnement_appli .fonctionnement_ordre i {
-  margin-right: 25px;
+  margin: 0 28px 0 10px;
+  color: #7e7e7e;
 }
 
 .fonctionnement_appli .fonctionnement_ordre span {
   font-weight: bold;
 }
 
-.restaurant {
+.fonctionnement_appli .fonctionnement_ordre .fa-store {
+  color: #9356DC;
+}
+
+.acceuil_restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,6 +165,58 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f6f6f6;
+  padding: 45px 20px;
+}
+
+.acceuil_restaurants .restaurants {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.acceuil_restaurants .restaurants .restaurant {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 25px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.acceuil_restaurants .restaurants .restaurant img {
+  background-size: contain;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.acceuil_restaurants .restaurants .restaurant .description_restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur {
+  position: absolute;
+  right: 0;
+  top: 10px;
 }
 
 img {
@@ -174,6 +231,12 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #353535;
+}
+
+footer h3 {
+  font-family: Shrikhand;
+  color: white;
 }
 
 .description_plat {
