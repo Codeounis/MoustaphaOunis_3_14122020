@@ -351,4 +351,103 @@ footer a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.bloc_plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  background-color: white;
+  padding-left: 10px;
+  border-radius: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.bloc_plat .plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 20px;
+}
+
+.bloc_plat .plat .name {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.bloc_plat .plat .infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bloc_plat .validate {
+  width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
+}
+
+.bloc_plat .validate i {
+  font-size: 1.2em;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.bloc_plat:hover .validate {
+  width: 60px;
+  background-color: #99e2d0;
+}
+
+.bloc_plat:hover .validate i {
+  -webkit-animation: spin 0.5s;
+          animation: spin 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
 /*# sourceMappingURL=main.css.map */

@@ -272,3 +272,68 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+
+
+.bloc_plat{
+    display: flex;
+    height: 70px;
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    // flex-direction: column;
+    // width: 90%;
+    .plat{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        padding-right: 20px;
+        .name{
+            margin-top: 10px;
+            margin-bottom: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .infos{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .validate{
+        width: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        transition: width 0.5s ease-out;
+        i{
+            font-size: 1.2em;
+        }
+    }
+    
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg)
+    }
+}
+
+.bloc_plat:hover{
+    .validate{
+        width: 60px;
+        background-color: #99e2d0;
+        i{
+            animation: spin 0.5s;
+            animation-iteration-count: 1;
+        }
+    }
+}
