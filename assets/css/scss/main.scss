@@ -252,6 +252,9 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
+    h2{
+        font-family: $titlefontfamily;
+    }
     i{
         font-size: 1.5em;
         font-weight: lighter;
