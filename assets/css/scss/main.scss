@@ -173,11 +173,11 @@ button
 }
 }
 
-.first_name{
+.restaurant_name{
     font-weight: bold;
     padding-top: 10px;
 }
-.second_name{
+.restaurant_adresse{
     margin:2px 0 10px 0;
 }
 
@@ -242,21 +242,21 @@ footer{
 }
 
 
-.type_plats{
-    padding: 5px 10px;
-    .titre_type_plats{
-        padding-left: 5px;
-    }
-}
-    .description_plat{
-        display: flex;
-        flex-direction: column;
-        // width: 90%;
-        background-color: white;
-        padding-left: 8px;
-        border-radius: 15px;
-        margin-top: 15px;
-    }
+// .type_plats{
+//     padding: 5px 10px;
+//     .titre_type_plats{
+//         padding-left: 5px;
+//     }
+// }
+//     .description_plat{
+//         display: flex;
+//         flex-direction: column;
+//         // width: 90%;
+//         background-color: white;
+//         padding-left: 8px;
+//         border-radius: 15px;
+//         margin-top: 15px;
+//     }
 
 .commander{
     display: flex;
