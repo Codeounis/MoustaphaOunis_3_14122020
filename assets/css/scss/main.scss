@@ -25,14 +25,27 @@ h1{
 
 a{
     text-decoration: none;
-    &:visited{
-        color: none;
-    }
+}
+
+a:visited{
+    color: black;
 }
 
 header{
     text-align: center;
+    .retour_header{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        a{
+            position: absolute;
+            left: 40px;
+            top: 25px;
+            font-size: 1.4em;
+        }
+    }
 }
+
 
 .page_restaurant{
     display: inline-flex;
@@ -267,16 +280,13 @@ footer{
 .separateur{
     height: 3px;
     width: 40px;
-    background-color: #99e2d0;
+    background-color:$colortertiary;
     margin-top: 5px;
 }
 
 .bloc_menu{
     padding: 0 10px ;
     margin-top: 25px;
-    // .type{
-    //     margin-bottom: 10px;
-    // }
     .bloc_plat{
         display: flex;
         height: 70px;

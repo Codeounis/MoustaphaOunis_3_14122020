@@ -18,11 +18,28 @@ a {
 }
 
 a:visited {
-  color: none;
+  color: black;
 }
 
 header {
   text-align: center;
+}
+
+header .retour_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+header .retour_header a {
+  position: absolute;
+  left: 40px;
+  top: 25px;
+  font-size: 1.4em;
 }
 
 .page_restaurant {
@@ -342,7 +359,7 @@ footer a {
 .separateur {
   height: 3px;
   width: 40px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   margin-top: 5px;
 }
 
