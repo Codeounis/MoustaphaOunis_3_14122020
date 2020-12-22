@@ -20,7 +20,6 @@ h1{
     font-family:$titlefontfamily ;
     margin: 0;
     padding-top: 15px;
-    
 }
 
 a{
@@ -45,7 +44,6 @@ header{
         }
     }
 }
-
 
 .page_restaurant{
     display: inline-flex;
@@ -229,9 +227,6 @@ footer{
     }
 }
 
-
-
-
 // Index 2 restaurant
 .image_restaurant{
     background-size: cover;
@@ -258,7 +253,7 @@ footer{
     i{
         font-size: 1.5em;
         font-weight: lighter;
-        padding-top: 15px;
+        padding-top: 0;
     }
 }
 
@@ -273,11 +268,6 @@ footer{
 
 .price{
     font-weight: bold;
-}
-
-.price_ligne{
-    display: flex;
-    justify-content: space-between;
 }
 
 .separateur{
@@ -303,16 +293,16 @@ footer{
         display: flex;
         flex-grow: 1;
         flex-direction: column;
-        padding-right: 20px;
+        padding-right: 20px;       
         .name{
             margin-top: 10px;
             margin-bottom: 8px;
             font-size: 1.2em;
-            font-weight: bold;
+            font-weight: bold; 
         }
         .infos{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between;  
         }
     }
     .validate{
@@ -334,7 +324,7 @@ footer{
 
 @keyframes spin{
     0%{
-        transform: rotate(0deg);
+        transform:rotate(0deg);
     }
     100%{
         transform:rotate(360deg)

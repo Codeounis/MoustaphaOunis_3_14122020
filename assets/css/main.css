@@ -330,7 +330,7 @@ footer a {
 .titre_restaurant i {
   font-size: 1.5em;
   font-weight: lighter;
-  padding-top: 15px;
+  padding-top: 0;
 }
 
 .commander {
@@ -349,15 +349,6 @@ footer a {
 
 .price {
   font-weight: bold;
-}
-
-.price_ligne {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .separateur {
