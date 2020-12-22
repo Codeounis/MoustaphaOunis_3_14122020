@@ -9,6 +9,8 @@ body {
 
 h1 {
   font-family: Shrikhand;
+  margin: 0;
+  padding-top: 15px;
 }
 
 a {
@@ -198,6 +200,8 @@ button:hover {
   margin-bottom: 25px;
   background-color: white;
   border-radius: 15px;
+  -webkit-box-shadow: 0px 4px 10px 3px #e2e2e2;
+          box-shadow: 0px 4px 10px 3px #e2e2e2;
 }
 
 .acceuil_restaurants .restaurants .restaurant img {
@@ -305,6 +309,7 @@ footer a {
 .titre_restaurant i {
   font-size: 1.5em;
   font-weight: lighter;
+  padding-top: 15px;
 }
 
 .commander {
@@ -315,6 +320,10 @@ footer a {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 0 45px 0;
+}
+
+.commander button {
+  width: 165px;
 }
 
 .price {
@@ -330,7 +339,19 @@ footer a {
           justify-content: space-between;
 }
 
-.bloc_plat {
+.separateur {
+  height: 3px;
+  width: 40px;
+  background-color: #99e2d0;
+  margin-top: 5px;
+}
+
+.bloc_menu {
+  padding: 0 10px;
+  margin-top: 25px;
+}
+
+.bloc_menu .bloc_plat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,9 +361,11 @@ footer a {
   border-radius: 15px;
   margin-top: 10px;
   cursor: pointer;
+  -webkit-box-shadow: 0px 4px 10px 3px #e2e2e2;
+          box-shadow: 0px 4px 10px 3px #e2e2e2;
 }
 
-.bloc_plat .plat {
+.bloc_menu .bloc_plat .plat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,14 +379,14 @@ footer a {
   padding-right: 20px;
 }
 
-.bloc_plat .plat .name {
+.bloc_menu .bloc_plat .plat .name {
   margin-top: 10px;
   margin-bottom: 8px;
   font-size: 1.2em;
   font-weight: bold;
 }
 
-.bloc_plat .plat .infos {
+.bloc_menu .bloc_plat .plat .infos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,7 +395,7 @@ footer a {
           justify-content: space-between;
 }
 
-.bloc_plat .validate {
+.bloc_menu .bloc_plat .validate {
   width: 0;
   overflow: hidden;
   display: -webkit-box;
@@ -391,7 +414,7 @@ footer a {
   transition: width 0.5s ease-out;
 }
 
-.bloc_plat .validate i {
+.bloc_menu .bloc_plat .validate i {
   font-size: 1.2em;
 }
 
