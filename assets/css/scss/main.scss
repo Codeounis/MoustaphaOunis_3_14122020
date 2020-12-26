@@ -145,6 +145,7 @@ button
     }
 }
 
+
 .acceuil_restaurants{
     display: flex;
     flex-direction: column;
@@ -182,10 +183,19 @@ button
                 right: 20px;
                 top: 12px;
                 font-size:1.8em;
+                i:hover{
+                //    background:  -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+                background: $colorprimary;
+                transition: all 150ms ease-out;
+                   background-clip: text;
+                   -webkit-text-fill-color: $colorsecondary;
+                }
             }
         }  
     }
 }
+
+
 }
 
 .restaurant_name{
@@ -289,20 +299,37 @@ footer{
         margin-top: 10px;
         cursor: pointer;
         box-shadow: 0px 4px 10px 3px rgba(226,226,226,1);
+        &.modified{
+            height: 85px;
+        }
     .plat{
         display: flex;
         flex-grow: 1;
         flex-direction: column;
-        padding-right: 20px;       
+        padding-right: 20px;  
         .name{
             margin-top: 10px;
             margin-bottom: 8px;
             font-size: 1.2em;
             font-weight: bold; 
+            max-width:268px;
+            width: 82%;
+            text-overflow: ellipsis;
+            text-overflow: "…";
+            white-space: nowrap;
+            overflow: hidden;
         }
         .infos{
             display: flex;
             justify-content: space-between;  
+            .ingredients{
+            text-overflow: ellipsis;
+            text-overflow: "…";
+            white-space: nowrap;
+            overflow: hidden;
+            max-width:267px;
+            width: 82%;
+            }
         }
     }
     .validate{

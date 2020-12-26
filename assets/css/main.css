@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Mise en place importations polices ShriKhand et Roboto*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -246,6 +247,14 @@ button:hover {
   font-size: 1.8em;
 }
 
+.acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur i:hover {
+  background: #9356DC;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+  background-clip: text;
+  -webkit-text-fill-color: #FF79DA;
+}
+
 .restaurant_name {
   font-weight: bold;
   padding-top: 10px;
@@ -377,6 +386,10 @@ footer a {
           box-shadow: 0px 4px 10px 3px #e2e2e2;
 }
 
+.bloc_menu .bloc_plat.modified {
+  height: 85px;
+}
+
 .bloc_menu .bloc_plat .plat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,6 +409,12 @@ footer a {
   margin-bottom: 8px;
   font-size: 1.2em;
   font-weight: bold;
+  max-width: 268px;
+  width: 82%;
+  text-overflow: ellipsis;
+  text-overflow: "…";
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .bloc_menu .bloc_plat .plat .infos {
@@ -405,6 +424,15 @@ footer a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.bloc_menu .bloc_plat .plat .infos .ingredients {
+  text-overflow: ellipsis;
+  text-overflow: "…";
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 267px;
+  width: 82%;
 }
 
 .bloc_menu .bloc_plat .validate {
