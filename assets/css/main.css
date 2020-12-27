@@ -22,6 +22,31 @@ a:visited {
   color: black;
 }
 
+#loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: animeloader 2.5s ease-out;
+          animation: animeloader 2.5s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#loader i {
+  color: #9356DC;
+}
+
 header {
   text-align: center;
 }
@@ -107,18 +132,19 @@ button {
   border-radius: 25px;
   padding: 15px 20px;
   color: white;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(175deg, #FF79DA, #9356DC);
   -webkit-box-shadow: 5px 5px 5px #d2d2d2;
           box-shadow: 5px 5px 5px #d2d2d2;
   border: none;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 button:hover {
-  background-color: white;
-  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(175deg, #ff83dd, #985ede);
 }
 
 .fonctionnement {
@@ -245,14 +271,24 @@ button:hover {
   right: 20px;
   top: 12px;
   font-size: 1.8em;
+  width: 27px;
 }
 
-.acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur i:hover {
-  background: #9356DC;
-  -webkit-transition: all 150ms ease-out;
-  transition: all 150ms ease-out;
-  background-clip: text;
-  -webkit-text-fill-color: #FF79DA;
+.acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur .far {
+  position: absolute;
+}
+
+.acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur .fas {
+  position: absolute;
+  opacity: 0;
+  color: #FF79DA;
+}
+
+.acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur:hover .fas {
+  color: #9356DC;
+  opacity: 1;
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
 }
 
 .restaurant_name {
@@ -377,6 +413,10 @@ footer a {
   display: -ms-flexbox;
   display: flex;
   height: 70px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  max-width: 350px;
+  width: 100%;
   background-color: white;
   padding-left: 10px;
   border-radius: 15px;
@@ -384,6 +424,12 @@ footer a {
   cursor: pointer;
   -webkit-box-shadow: 0px 4px 10px 3px #e2e2e2;
           box-shadow: 0px 4px 10px 3px #e2e2e2;
+  -webkit-animation-name: animechargement;
+          animation-name: animechargement;
+  -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .bloc_menu .bloc_plat.modified {
@@ -409,8 +455,6 @@ footer a {
   margin-bottom: 8px;
   font-size: 1.2em;
   font-weight: bold;
-  max-width: 268px;
-  width: 82%;
   text-overflow: ellipsis;
   text-overflow: "…";
   white-space: nowrap;
@@ -428,15 +472,13 @@ footer a {
 
 .bloc_menu .bloc_plat .plat .infos .ingredients {
   text-overflow: ellipsis;
-  text-overflow: "…";
   white-space: nowrap;
   overflow: hidden;
-  max-width: 267px;
-  width: 82%;
 }
 
 .bloc_menu .bloc_plat .validate {
   width: 0;
+  min-width: 0;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,6 +522,14 @@ footer a {
   }
 }
 
+.bloc_plat:hover .plat .name {
+  max-width: 207px;
+}
+
+.bloc_plat:hover .plat .ingredients {
+  max-width: 207px;
+}
+
 .bloc_plat:hover .validate {
   width: 60px;
   background-color: #99e2d0;
@@ -490,5 +540,87 @@ footer a {
           animation: spin 0.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+}
+
+@-webkit-keyframes animechargement {
+  0% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes animechargement {
+  0% {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 10px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animeloader {
+  0% {
+    opacity: 1;
+    font-size: 5em;
+  }
+  20% {
+    font-size: 4em;
+  }
+  40% {
+    font-size: 5em;
+  }
+  60% {
+    font-size: 4em;
+  }
+  80% {
+    font-size: 5em;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+    font-size: 4em;
+  }
+}
+
+@keyframes animeloader {
+  0% {
+    opacity: 1;
+    font-size: 5em;
+  }
+  20% {
+    font-size: 4em;
+  }
+  40% {
+    font-size: 5em;
+  }
+  60% {
+    font-size: 4em;
+  }
+  80% {
+    font-size: 5em;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+    font-size: 4em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

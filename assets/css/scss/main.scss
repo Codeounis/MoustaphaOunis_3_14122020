@@ -30,6 +30,26 @@ a:visited{
     color: black;
 }
 
+
+#loader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color:#f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // display: none;
+    animation: animeloader 2.5s ease-out;
+    animation-fill-mode: forwards;
+    i{
+        // font-size: 5em;
+        color: $colorprimary;
+        // animation: animeloadericon 2.5s ease-out;
+    }
+}
+
 header{
     text-align: center;
     .retour_header{
@@ -92,13 +112,15 @@ button
   border-radius: 25px;
   padding:15px 20px;
   color:white;
-  background-image:linear-gradient($colorsecondary,$colorprimary);
+  background-image:linear-gradient(175deg,$colorsecondary,$colorprimary);
   box-shadow:5px 5px 5px rgb(210,210,210);
   border:none;
   cursor: pointer;
+  transition: all 0.3s ease-out;
     &:hover{
-        background-color: white;
-        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+        // background-color: white;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
+        background-image:linear-gradient(175deg,lighten($colorsecondary,2%),lighten($colorprimary,2%));
     }
 }
 
@@ -183,12 +205,38 @@ button
                 right: 20px;
                 top: 12px;
                 font-size:1.8em;
-                i:hover{
-                //    background:  -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-                background: $colorprimary;
-                transition: all 150ms ease-out;
-                   background-clip: text;
-                   -webkit-text-fill-color: $colorsecondary;
+                width: 27px;
+                .far{
+                    position: absolute;
+                }
+                // .far:hover{
+                //     display: none;
+                // }
+                // i:hover{
+                // background: $colorprimary;
+                // transition: all 150ms ease-out;
+                // background-clip: text $colorprimary;
+                // }
+                .fas{
+                    // display: none;
+                    position: absolute;
+                    opacity: 0;
+                    color: $colorsecondary;
+                    // scale: 0;
+                }
+                // .fas:hover{
+                //     display: initial;
+                //     opacity: 1;
+                //     transition: opacity 0.5s ease-out;
+                // }
+            }
+            .coeur:hover{
+                .fas{
+                    // position: relative;
+                    color: $colorprimary;
+                    opacity: 1;
+                    transition: all 0.75s ease-out;
+                    // scale: 1;
                 }
             }
         }  
@@ -287,24 +335,38 @@ footer{
     margin-top: 5px;
 }
 
+// .menus_restaurant{
+//     display: flex;
+// }
+
 .bloc_menu{
     padding: 0 10px ;
     margin-top: 25px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     .bloc_plat{
         display: flex;
         height: 70px;
+        align-self: center;
+        max-width: 350px;
+        width: 100%;
         background-color: white;
         padding-left: 10px;
         border-radius: 15px;
         margin-top: 10px;
         cursor: pointer;
         box-shadow: 0px 4px 10px 3px rgba(226,226,226,1);
+        animation-name: animechargement ;
+        animation-duration: 1.25s;
+        animation-timing-function: ease-out;
         &.modified{
             height: 85px;
         }
     .plat{
         display: flex;
         flex-grow: 1;
+        // max-width: 100%;
         flex-direction: column;
         padding-right: 20px;  
         .name{
@@ -312,8 +374,8 @@ footer{
             margin-bottom: 8px;
             font-size: 1.2em;
             font-weight: bold; 
-            max-width:268px;
-            width: 82%;
+            // max-width:268px;
+            // width: 82%;
             text-overflow: ellipsis;
             text-overflow: "…";
             white-space: nowrap;
@@ -321,19 +383,21 @@ footer{
         }
         .infos{
             display: flex;
-            justify-content: space-between;  
+            justify-content: space-between; 
             .ingredients{
             text-overflow: ellipsis;
-            text-overflow: "…";
+            // display: flex;
+            // text-overflow: "…";
             white-space: nowrap;
             overflow: hidden;
-            max-width:267px;
-            width: 82%;
+            // max-width:267px;
+            // width: 82%;
             }
         }
     }
     .validate{
         width: 0;
+        min-width: 0;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -359,8 +423,20 @@ footer{
 }
 
 .bloc_plat:hover{
-    .validate{
+    .plat{ 
+        .name{
+            max-width:207px;
+                // width: 82%;
+        }
+        .ingredients{
+            max-width:207px;
+                // width: 82%;
+        }
+        
+     }
+     .validate{
         width: 60px;
+        // min-width: 60px;
         background-color: #99e2d0;
         i{
             animation: spin 0.5s;
@@ -368,3 +444,58 @@ footer{
         }
     }
 }
+
+@keyframes animechargement{
+    0%{
+        margin-top: 20px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 10px;
+        opacity: 1;
+    }
+}
+
+@keyframes animeloader{
+    0%{
+        // margin-top: 20px;
+        opacity: 1;
+        // display: initial;
+        font-size: 5em;
+    }
+    20%{
+        font-size: 4em;
+    }
+    40%{
+        font-size: 5em;
+    }
+    60%{
+        font-size: 4em;
+    }
+    80%{
+        font-size: 5em;
+    }
+    90%{
+        opacity: 1;
+    }
+    99%{
+        z-index: 1;
+        // opacity: 1;
+    }
+    100%{
+        // margin-top: 10px;
+        opacity: 0;
+        // display: none;
+        z-index: -10;
+        font-size: 4em;
+    }
+}
+
+// @keyframes animeloadericon{
+//     0%{
+//         font-size: 5em;
+//     }
+//     100%{
+//         font-size: 4em;
+//     }
+// }
