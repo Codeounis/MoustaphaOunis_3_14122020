@@ -302,6 +302,8 @@ button:hover {
 
 img {
   height: 175px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {
