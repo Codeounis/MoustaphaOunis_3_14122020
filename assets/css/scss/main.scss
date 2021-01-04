@@ -48,6 +48,10 @@ a:visited{
         color: $colorprimary;
         // animation: animeloadericon 2.5s ease-out;
     }
+    img{
+        object-fit: contain;
+        width: 50%;
+    }
 }
 
 header{
@@ -160,6 +164,7 @@ button
         }
         span{
             font-weight: bold;
+            color: black;
         }
         .fa-store{
             color:$colorprimary;
@@ -230,12 +235,23 @@ button
                 //     transition: opacity 0.5s ease-out;
                 // }
             }
-            .coeur:hover{
+            // .coeur:hover{
+            //     .fas{
+            //         // position: relative;
+            //         color: $colorprimary;
+            //         opacity: 1;
+            //         transition: all 0.75s ease-out;
+            //         // scale: 1;
+            //     }
+            // }
+            .coeur:active{
                 .fas{
                     // position: relative;
                     color: $colorprimary;
+                    animation-name: animecoeur ;
                     opacity: 1;
-                    transition: all 0.75s ease-out;
+                    animation-duration: 0.75s;
+                    animation-timing-function: ease-out;
                     // scale: 1;
                 }
             }
@@ -249,9 +265,11 @@ button
 .restaurant_name{
     font-weight: bold;
     padding-top: 10px;
+    display: block;
 }
 .restaurant_adresse{
     margin:2px 0 10px 0;
+    display: block;
 }
 
 img{
@@ -284,9 +302,15 @@ footer{
         color: white;
         margin-bottom: 5px;
     }
+    a:visited{
+        color: whitesmoke;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
 }
 
-// Index 2 restaurant
+//---------------------------- Css PAges Restaurants------------------------------ //
 .image_restaurant{
     img{
     background-size: cover;
@@ -465,6 +489,16 @@ footer{
         opacity: 1;
     }
 }
+
+@keyframes animecoeur{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 
 @keyframes animeloader{
     0%{
