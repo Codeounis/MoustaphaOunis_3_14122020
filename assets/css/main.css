@@ -170,6 +170,12 @@ button:hover {
           flex-direction: column;
 }
 
+@media (min-width: 540px) {
+  .fonctionnement h2 {
+    text-align: center;
+  }
+}
+
 .fonctionnement_appli {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,6 +256,11 @@ button:hover {
 
 .fonctionnement_appli .fonctionnement_ordre .fa-store {
   color: #9356DC;
+  margin-right: 21px;
+}
+
+.fonctionnement_appli .fonctionnement_ordre .fa-list-ul {
+  margin-right: 22px;
 }
 
 .acceuil_restaurants {
@@ -265,6 +276,16 @@ button:hover {
           justify-content: center;
   background-color: #f6f6f6;
   padding: 45px 20px;
+}
+
+@media (min-width: 540px) {
+  .acceuil_restaurants {
+    padding-top: 25px;
+  }
+  .acceuil_restaurants h2 {
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
 .acceuil_restaurants .restaurants {
