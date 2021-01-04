@@ -302,12 +302,21 @@ button:hover {
 
 .acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur {
   position: absolute;
-  right: 20px;
-  top: 12px;
-  font-size: 1.8em;
-  width: 27px;
-  height: 30px;
+  right: 12px;
+  top: -1px;
+  font-size: 1.9em;
+  width: 60px;
+  height: 53px;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur .far {
