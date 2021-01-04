@@ -211,6 +211,7 @@ button
                 top: 12px;
                 font-size:1.8em;
                 width: 27px;
+                cursor: pointer;
                 .far{
                     position: absolute;
                 }
@@ -235,15 +236,15 @@ button
                 //     transition: opacity 0.5s ease-out;
                 // }
             }
-            // .coeur:hover{
-            //     .fas{
-            //         // position: relative;
-            //         color: $colorprimary;
-            //         opacity: 1;
-            //         transition: all 0.75s ease-out;
-            //         // scale: 1;
-            //     }
-            // }
+            .coeur:hover{
+                .fas{
+                    // position: relative;
+                    color: $colorprimary;
+                    opacity: 1;
+                    transition: all 0.75s ease-out;
+                    // scale: 1;
+                }
+            }
             .coeur:active{
                 .fas{
                     // position: relative;
@@ -252,6 +253,8 @@ button
                     opacity: 1;
                     animation-duration: 0.75s;
                     animation-timing-function: ease-out;
+                    // animation-fill-mode: forwards;
+                    // animation-delay: 1s;
                     // scale: 1;
                 }
             }
@@ -457,6 +460,29 @@ footer{
 }
 
 .bloc_plat:hover{
+    .plat{ 
+        .name{
+            max-width:207px;
+                // width: 82%;
+        }
+        .ingredients{
+            max-width:207px;
+                // width: 82%;
+        }
+        
+     }
+     .validate{
+        width: 60px;
+        // min-width: 60px;
+        background-color: #99e2d0;
+        i{
+            animation: spin 0.5s;
+            animation-iteration-count: 1;
+        }
+    }
+}
+
+.bloc_plat:active{
     .plat{ 
         .name{
             max-width:207px;

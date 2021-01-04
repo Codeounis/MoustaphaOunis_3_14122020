@@ -279,6 +279,7 @@ button:hover {
   top: 12px;
   font-size: 1.8em;
   width: 27px;
+  cursor: pointer;
 }
 
 .acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur .far {
@@ -289,6 +290,13 @@ button:hover {
   position: absolute;
   opacity: 0;
   color: #FF79DA;
+}
+
+.acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur:hover .fas {
+  color: #9356DC;
+  opacity: 1;
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
 }
 
 .acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur:active .fas {
@@ -571,6 +579,26 @@ footer a:hover {
 }
 
 .bloc_plat:hover .validate i {
+  -webkit-animation: spin 0.5s;
+          animation: spin 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.bloc_plat:active .plat .name {
+  max-width: 207px;
+}
+
+.bloc_plat:active .plat .ingredients {
+  max-width: 207px;
+}
+
+.bloc_plat:active .validate {
+  width: 60px;
+  background-color: #99e2d0;
+}
+
+.bloc_plat:active .validate i {
   -webkit-animation: spin 0.5s;
           animation: spin 0.5s;
   -webkit-animation-iteration-count: 1;
