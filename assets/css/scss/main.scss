@@ -8,9 +8,9 @@
 
 // $bodyfontfamily:Roboto;
 // $titlefontfamily:Shrikhand;
-$colorprimary:#9356DC;
-$colorsecondary:#FF79DA;
-$colortertiary:#99E2D0;
+// $colorprimary:#9356DC;
+// $colorsecondary:#FF79DA;
+// $colortertiary:#99E2D0;
 
 
 // body{
@@ -375,8 +375,14 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
+    @media(min-width:540px){
+        justify-content: center;
+        h2{
+            margin-right: 25px;
+        }
+    }
     h2{
-        font-family: $titlefontfamily;
+    font-family: $titlefontfamily;
     }
     i{
         font-size: 1.5em;
@@ -415,13 +421,16 @@ footer{
 .bloc_menu{
     padding: 0 10px ;
     margin-top: 25px;
-    max-width: 420px;
+    max-width: 870px;
     width: 100%;
+    @media(min-width:870px){
+        width: 420px;
+    }
     .bloc_plat{
         display: flex;
         height: 70px;
         align-self: center;
-        max-width: 400px;
+        max-width: 870px;
         background-color: white;
         padding-left: 10px;
         border-radius: 15px;
@@ -431,6 +440,9 @@ footer{
         animation-name: animechargement ;
         animation-duration: 1.25s;
         animation-timing-function: ease-out;
+        @media(min-width:870px){
+            width: 410px;
+        }
     .plat{
         display: flex;
         flex-grow: 1;
@@ -445,6 +457,9 @@ footer{
             text-overflow: "…";
             white-space: nowrap;
             overflow: hidden;
+            @media(min-width:500px ){
+                overflow:visible;
+            }
         }
         .infos{
             display: flex;
@@ -453,6 +468,9 @@ footer{
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
+                @media(min-width:500px ){ 
+                    overflow:visible;
+                    }
                 }
             }
         }

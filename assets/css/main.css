@@ -513,6 +513,17 @@ footer a:hover {
   padding: 5px 20px;
 }
 
+@media (min-width: 540px) {
+  .titre_restaurant {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .titre_restaurant h2 {
+    margin-right: 25px;
+  }
+}
+
 .titre_restaurant h2 {
   font-family: Shrikhand;
 }
@@ -562,8 +573,14 @@ footer a:hover {
 .bloc_menu {
   padding: 0 10px;
   margin-top: 25px;
-  max-width: 420px;
+  max-width: 870px;
   width: 100%;
+}
+
+@media (min-width: 870px) {
+  .bloc_menu {
+    width: 420px;
+  }
 }
 
 .bloc_menu .bloc_plat {
@@ -573,7 +590,7 @@ footer a:hover {
   height: 70px;
   -ms-flex-item-align: center;
       align-self: center;
-  max-width: 400px;
+  max-width: 870px;
   background-color: white;
   padding-left: 10px;
   border-radius: 15px;
@@ -587,6 +604,12 @@ footer a:hover {
           animation-duration: 1.25s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+}
+
+@media (min-width: 870px) {
+  .bloc_menu .bloc_plat {
+    width: 410px;
+  }
 }
 
 .bloc_menu .bloc_plat .plat {
@@ -614,6 +637,12 @@ footer a:hover {
   overflow: hidden;
 }
 
+@media (min-width: 500px) {
+  .bloc_menu .bloc_plat .plat .name {
+    overflow: visible;
+  }
+}
+
 .bloc_menu .bloc_plat .plat .infos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -627,6 +656,12 @@ footer a:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+@media (min-width: 500px) {
+  .bloc_menu .bloc_plat .plat .infos .ingredients {
+    overflow: visible;
+  }
 }
 
 .bloc_menu .bloc_plat .validate {
