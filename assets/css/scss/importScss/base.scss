@@ -1,0 +1,27 @@
+
+// Polices + éléments de base 
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$bodyfontfamily:Roboto;
+$titlefontfamily:Shrikhand;
+
+body{
+    font-size:15px;
+    font-family:$bodyfontfamily ;
+    margin: 0;
+}
+
+h1{
+    font-family:$titlefontfamily ;
+    margin: 0;
+    padding-top: 15px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
