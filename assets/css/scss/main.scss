@@ -40,13 +40,10 @@ a:visited{
     display: flex;
     justify-content: center;
     align-items: center;
-    // display: none;
     animation: animeloader 2.5s ease-out;
     animation-fill-mode: forwards;
     i{
-        // font-size: 5em;
         color: $colorprimary;
-        // animation: animeloadericon 2.5s ease-out;
     }
     img{
         object-fit: contain;
@@ -122,7 +119,6 @@ button
   cursor: pointer;
   transition: all 0.3s ease-out;
     &:hover{
-        // background-color: white;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
         background-image:linear-gradient(175deg,lighten($colorsecondary,2%),lighten($colorprimary,2%));
     }
@@ -172,97 +168,66 @@ button
     }
 }
 
-
 .acceuil_restaurants{
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color:#f6f6f6 ;
-    padding:45px 20px;
-    // h2{
-    //     padding-left: 10px;
-    // }
-   
-.restaurants{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    .restaurant{
-        // display: inline-flex;
-        width: 100%;
+    padding:45px 20px; 
+    .restaurants{
+        display: inline-flex;
         flex-direction: column;
-        margin-bottom: 25px;
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0px 4px 10px 3px rgba(226,226,226,1);
-        img{
-            background-size: contain;
+        align-items: center;
+        .restaurant{
             width: 100%;
-            border-radius: 15px 15px 0 0;
-        }
-        .description_restaurant{
-            display: flex;
             flex-direction: column;
-            position: relative;
-            padding-left: 15px;
-         .coeur{
-                position: absolute;
-                right: 20px;
-                top: 12px;
-                font-size:1.8em;
-                width: 27px;
-                cursor: pointer;
-                .far{
+            margin-bottom: 25px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px 3px rgba(226,226,226,1);
+            img{
+                background-size: contain;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+            }
+            .description_restaurant{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding-left: 15px;
+                .coeur{
                     position: absolute;
+                    right: 20px;
+                    top: 12px;
+                    font-size:1.8em;
+                    width: 27px;
+                    cursor: pointer;
+                    .far{
+                        position: absolute;
+                    }
+                    .fas{
+                        position: absolute;
+                        opacity: 0;
+                        color: $colorsecondary;
+                    }
                 }
-                // .far:hover{
-                //     display: none;
-                // }
-                // i:hover{
-                // background: $colorprimary;
-                // transition: all 150ms ease-out;
-                // background-clip: text $colorprimary;
-                // }
-                .fas{
-                    // display: none;
-                    position: absolute;
-                    opacity: 0;
-                    color: $colorsecondary;
-                    // scale: 0;
+                .coeur:hover{
+                    .fas{
+                        color: $colorprimary;
+                        opacity: 1;
+                        transition: all 0.75s ease-out;
+                    }
                 }
-                // .fas:hover{
-                //     display: initial;
-                //     opacity: 1;
-                //     transition: opacity 0.5s ease-out;
-                // }
-            }
-            .coeur:hover{
-                .fas{
-                    // position: relative;
-                    color: $colorprimary;
-                    opacity: 1;
-                    transition: all 0.75s ease-out;
-                    // scale: 1;
-                }
-            }
-            .coeur:active{
-                .fas{
-                    // position: relative;
-                    color: $colorprimary;
-                    animation-name: animecoeur ;
-                    opacity: 1;
-                    animation-duration: 0.75s;
-                    animation-timing-function: ease-out;
-                    // animation-fill-mode: forwards;
-                    // animation-delay: 1s;
-                    // scale: 1;
-                }
-            }
-        }  
+                .coeur:active{
+                    .fas{
+                        color: $colorprimary;
+                        opacity: 1;
+                        transition: all 0.75s ease-out;
+                    }
+                }   
+            }     
+        }   
     }
-}
-
-
 }
 
 .restaurant_name{
@@ -276,8 +241,6 @@ button
 }
 
 img{
-    // max-width: 450px;
-    // width: 50%;
     height: 175px;
     object-fit: cover;
 }
@@ -317,8 +280,6 @@ footer{
 .image_restaurant{
     img{
     background-size: cover;
-    // background-image: url("/assets/img/restaurants/resto1.jpg");
-    // background-repeat: no-repeat;
     width: 100%;
     height: 175px;
     }
@@ -328,7 +289,8 @@ footer{
     background-color: #f6f6f6;
     margin-top: -35px;
     border-radius: 20px;
-    overflow: overlay;
+    z-index: 1;
+    position: relative;
 }
 
 .titre_restaurant{
@@ -379,15 +341,11 @@ footer{
     margin-top: 25px;
     max-width: 420px;
     width: 100%;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
     .bloc_plat{
         display: flex;
         height: 70px;
         align-self: center;
         max-width: 400px;
-        // width: 100%;
         background-color: white;
         padding-left: 10px;
         border-radius: 15px;
@@ -403,7 +361,6 @@ footer{
     .plat{
         display: flex;
         flex-grow: 1;
-        // max-width: 100%;
         flex-direction: column;
         padding-right: 20px;  
         .name{
@@ -411,8 +368,6 @@ footer{
             margin-bottom: 8px;
             font-size: 1.2em;
             font-weight: bold; 
-            // max-width:268px;
-            // width: 82%;
             text-overflow: ellipsis;
             text-overflow: "…";
             white-space: nowrap;
@@ -423,12 +378,8 @@ footer{
             justify-content: space-between; 
             .ingredients{
             text-overflow: ellipsis;
-            // display: flex;
-            // text-overflow: "…";
             white-space: nowrap;
             overflow: hidden;
-            // max-width:267px;
-            // width: 82%;
             }
         }
     }
@@ -463,17 +414,15 @@ footer{
     .plat{ 
         .name{
             max-width:207px;
-                // width: 82%;
         }
         .ingredients{
             max-width:207px;
-                // width: 82%;
+                
         }
         
      }
      .validate{
         width: 60px;
-        // min-width: 60px;
         background-color: #99e2d0;
         i{
             animation: spin 0.5s;
@@ -486,11 +435,9 @@ footer{
     .plat{ 
         .name{
             max-width:207px;
-                // width: 82%;
         }
         .ingredients{
             max-width:207px;
-                // width: 82%;
         }
         
      }
@@ -512,15 +459,6 @@ footer{
     }
     100%{
         margin-top: 10px;
-        opacity: 1;
-    }
-}
-
-@keyframes animecoeur{
-    0%{
-        opacity: 0;
-    }
-    100%{
         opacity: 1;
     }
 }

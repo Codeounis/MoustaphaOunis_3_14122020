@@ -301,13 +301,9 @@ button:hover {
 
 .acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur:active .fas {
   color: #9356DC;
-  -webkit-animation-name: animecoeur;
-          animation-name: animecoeur;
   opacity: 1;
-  -webkit-animation-duration: 0.75s;
-          animation-duration: 0.75s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
+  -webkit-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
 }
 
 .restaurant_name {
@@ -382,7 +378,8 @@ footer a:hover {
   background-color: #f6f6f6;
   margin-top: -35px;
   border-radius: 20px;
-  overflow: overlay;
+  z-index: 1;
+  position: relative;
 }
 
 .titre_restaurant {
@@ -623,24 +620,6 @@ footer a:hover {
   }
   100% {
     margin-top: 10px;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes animecoeur {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes animecoeur {
-  0% {
-    opacity: 0;
-  }
-  100% {
     opacity: 1;
   }
 }
