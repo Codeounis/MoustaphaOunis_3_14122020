@@ -47,10 +47,19 @@ a:visited {
   color: #9356DC;
 }
 
+#loader :nth-child(3) {
+  color: #FF79DA;
+}
+
 #loader img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 50%;
+  -webkit-animation: animelogoloader 2.5s ease-out;
+          animation: animelogoloader 2.5s ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  padding: 0px 5px;
 }
 
 header {
@@ -69,7 +78,7 @@ header .retour_header {
 
 header .retour_header a {
   position: absolute;
-  left: 40px;
+  left: 15px;
   top: 25px;
   font-size: 1.4em;
 }
@@ -255,6 +264,20 @@ button:hover {
           box-shadow: 0px 4px 10px 3px #e2e2e2;
 }
 
+.acceuil_restaurants .restaurants .restaurant a {
+  position: relative;
+}
+
+.acceuil_restaurants .restaurants .restaurant a .new {
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 3px;
+  position: absolute;
+  top: -148px;
+  right: 11px;
+  padding: 7px;
+}
+
 .acceuil_restaurants .restaurants .restaurant img {
   background-size: contain;
   width: 100%;
@@ -271,6 +294,10 @@ button:hover {
           flex-direction: column;
   position: relative;
   padding-left: 15px;
+}
+
+.acceuil_restaurants .restaurants .restaurant .description_restaurant a span {
+  color: black;
 }
 
 .acceuil_restaurants .restaurants .restaurant .description_restaurant .coeur {
@@ -472,10 +499,6 @@ footer a:hover {
           animation-timing-function: ease-out;
 }
 
-.bloc_menu .bloc_plat.modified {
-  height: 85px;
-}
-
 .bloc_menu .bloc_plat .plat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -627,19 +650,19 @@ footer a:hover {
 @-webkit-keyframes animeloader {
   0% {
     opacity: 1;
-    font-size: 5em;
+    font-size: 6em;
   }
   20% {
-    font-size: 4em;
+    font-size: 5em;
   }
   40% {
-    font-size: 5em;
+    font-size: 6em;
   }
   60% {
-    font-size: 4em;
+    font-size: 5em;
   }
   80% {
-    font-size: 5em;
+    font-size: 6em;
   }
   90% {
     opacity: 1;
@@ -657,19 +680,19 @@ footer a:hover {
 @keyframes animeloader {
   0% {
     opacity: 1;
-    font-size: 5em;
+    font-size: 6em;
   }
   20% {
-    font-size: 4em;
+    font-size: 5em;
   }
   40% {
-    font-size: 5em;
+    font-size: 6em;
   }
   60% {
-    font-size: 4em;
+    font-size: 5em;
   }
   80% {
-    font-size: 5em;
+    font-size: 6em;
   }
   90% {
     opacity: 1;
@@ -681,6 +704,48 @@ footer a:hover {
     opacity: 0;
     z-index: -10;
     font-size: 4em;
+  }
+}
+
+@-webkit-keyframes animelogoloader {
+  0% {
+    width: 50%;
+  }
+  20% {
+    width: 60%;
+  }
+  40% {
+    width: 50%;
+  }
+  60% {
+    width: 60%;
+  }
+  80% {
+    width: 50%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes animelogoloader {
+  0% {
+    width: 50%;
+  }
+  20% {
+    width: 60%;
+  }
+  40% {
+    width: 50%;
+  }
+  60% {
+    width: 60%;
+  }
+  80% {
+    width: 50%;
+  }
+  100% {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=main.css.map */
