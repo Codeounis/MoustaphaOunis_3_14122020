@@ -1,0 +1,18 @@
+// Composants Ohmyfood
+
+button
+{
+  margin-top:10px;
+  border-radius: 25px;
+  padding:15px 20px;
+  color:white;
+  background-image:linear-gradient(175deg,$colorsecondary,$colorprimary);
+  box-shadow:5px 5px 5px rgb(210,210,210);
+  border:none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+    &:hover{
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.50);
+        background-image:linear-gradient(175deg,lighten($colorsecondary,2%),lighten($colorprimary,2%));
+    }
+}
